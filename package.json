@@ -1,0 +1,32 @@
+{
+  "name": "jest-s3",
+  "version": "1.0.0",
+  "description": "Jest preset to run a S3rver instance.",
+  "engines": {
+    "node": "^12.16.0",
+    "npm": "^6.14.5"
+  },
+  "files": [
+    "jest-preset.js",
+    "setup.js",
+    "teardown.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "s3",
+    "s3rver",
+    "s3 local",
+    "jest",
+    "jest preset",
+    "serverless"
+  ],
+  "author": "cjuega",
+  "license": "MIT",
+  "dependencies": {
+    "cwd": "^0.10.0",
+    "debug": "^4.1.1",
+    "s3rver": "^3.6.1"
+  }
+}
