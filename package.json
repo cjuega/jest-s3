@@ -11,6 +11,10 @@
     "setup.js",
     "teardown.js"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cjuega/jest-s3.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
