@@ -6,9 +6,7 @@ const { resolve } = require("path"),
 const defaultOptions = {
     port: 4569,
     address: "localhost",
-    location: ".",
-    accessKeyId: "S3RVER",
-    secretAccessKey: "S3RVER",
+    directory: "."
 };
 
 module.exports = async function () {
