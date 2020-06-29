@@ -7,14 +7,14 @@ const { resolve } = require("path"),
 const defaultOptions = {
     port: 4569,
     address: "localhost",
-    directory: "."
+    directory: ".",
 };
 
 module.exports = async function () {
     const config = require(resolve(cwd(), "jest-s3-config.js")),
         s3rverOptions = typeof config === "function" ? await config() : config,
         s3rver = new S3rver(Object.assign(defaultOptions, s3rverOptions)),
-        runAsync = promisify(s3rver.run);
+        runAsync = promisify(s3rver.run).bind(s3rver);
 
     await runAsync();
 

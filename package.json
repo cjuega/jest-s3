@@ -1,6 +1,6 @@
 {
   "name": "jest-s3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Jest preset to run a S3rver instance.",
   "engines": {
     "node": "^12.16.0",
