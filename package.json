@@ -20,9 +20,11 @@
   },
   "keywords": [
     "s3",
-    "s3rver",
-    "s3 local",
     "jest",
+    "s3 local",
+    "serverless-offline",
+    "serverless-s3-local",
+    "s3rver",
     "jest preset",
     "serverless"
   ],
