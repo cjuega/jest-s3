@@ -9,7 +9,7 @@ Inspired by [jest-dynamodb](https://github.com/shelfio/jest-dynamodb).
 1. Install:
 
     ```sh
-    npm i --save jest-s3
+    npm i --save-dev jest-s3
     ```
 
 2. Setup `jest.config.js`.
