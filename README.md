@@ -51,6 +51,21 @@ Inspired by [jest-dynamodb](https://github.com/shelfio/jest-dynamodb).
 
 const Serverless = require('serverless');
 
+function getResources(service) {
+    if (Array.isArray(service.resources)) {
+        return service.resources.reduce(
+            (acc, resourceSet) => ({ ...acc, ...resourceSet.Resources }),
+            {}
+        );
+    }
+
+    if (service.resources) {
+        return service.resources.Resources;
+    }
+
+    return [];
+}
+
 module.exports = async () => {
     const serverless = new Serverless();
 
@@ -58,12 +73,7 @@ module.exports = async () => {
 
     // eslint-disable-next-line one-var
     const service = await serverless.variables.populateService(),
-        resources = Array.isArray(service.resources)
-            ? service.resources.reduce(
-                (acc, resourceSet) => ({ ...acc, ...resourceSet.Resources }),
-                {}
-            )
-            : service.resources.Resources,
+        resources = getResources(service),
         buckets = Object.keys(resources)
             .map((name) => resources[name])
             .filter((r) => r.Type === 'AWS::S3::Bucket')
