@@ -3,8 +3,8 @@
   "version": "1.0.3",
   "description": "Jest preset to run a S3rver instance.",
   "engines": {
-    "node": "^12.16.0",
-    "npm": "^6.14.5"
+    "node": ">=10.15.3",
+    "npm": ">=6.14.5"
   },
   "files": [
     "jest-preset.js",
